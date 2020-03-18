@@ -1,0 +1,14 @@
+.titulo{
+    margin-top: 2cm;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+.form-group{
+    font-size: larger;
+    padding-top: 1cm;
+    padding-left: 20%;
+}
+.botao{
+    padding-left: 20%;
+}

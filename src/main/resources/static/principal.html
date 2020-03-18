@@ -1,0 +1,35 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="principal.css" />
+</head>
+<div>
+    <h1 class="titulo">Cidades</h1>
+</div>
+<div>
+    <div class="botao">
+        <span class="input-group-btn">
+            <a href="/cidades/new" class="btn btn-primary btn-lg">Cadastrar Cidade</a>
+        </span>
+    </div>
+</div>
+<div class="painel" ng-controller = "CidadesController">
+    <div class="panel-body"></div>
+    <div ng-repeat = "cidade in cidades">
+        <div class="card" style="width: 22rem;">
+            <ul class="list-group">
+                <li class="list-group-item active">{{cidade.nome}}</li>
+                <li class="list-group-item">Estado:  {{cidade.descricao}}</li>
+                <li class="list-group-item">Data da Emancipação:  {{cidade.dataemancipacao | date: 'dd/MM/yyyy'}}</li>
+                <li class="list-group-item">PIB:  {{cidade.pib}}</li>
+            </ul>
+        </div>
+        <div>
+            <div class="botoes">
+                <span class="input-group-btn">
+                    <a href="cidades/{{cidade.idcidade}}" class="btn btn-primary">Editar</a>
+                    <button ng-click="remover(cidade)" class="btn btn-danger">Excluir</button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
